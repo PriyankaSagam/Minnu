@@ -44,53 +44,53 @@ console.log(player2);
 let dice = new Dice();
 
 let goAhead = 'yes';
-let player1Played = false;
-let player2Played = false;
-let player1ScoreAll = [];
-let player2ScoreAll = [];
-var finalscore1 = 0;
-var finalscore2 = 0;
+let AnnPlayed = false;
+let SamPlayed = false;
+let AnnScoreAll = [];
+let SamScoreAll = [];
+var finalscoreAnn = 0;
+var finalscoreSam = 0;
 
-for (i=0;i<5;i++){
+for (i=1;i<6;i++){
         console.log("round no. :" + i);
 
-        if (player1Played == false){
-            const player1Score = dice.rollDice();
-            console.log("Player1 Score: " + player1Score);
-            player1Played = true; 
-            player1ScoreAll = player1.buildScore(player1Score);
-            //console.log(player1ScoreAll);
+        if (AnnPlayed == false){
+            const AnnScore = dice.rollDice();
+            console.log("Ann Score: " + AnnScore);
+            AnnPlayed = true; 
+            AnnScoreAll = player1.buildScore(AnnScore);
+            //console.log(AnnScoreAll);
             
         } 
 
-        if (player2Played == false){
-            const player2Score = dice.rollDice();
-            console.log("Player2 Score: " + player2Score);
-            player2Played = true;
-            player2ScoreAll = player2.buildScore(player2Score);
-            //console.log(player2ScoreAll);
+        if (SamPlayed == false){
+            const SamScore = dice.rollDice();
+            console.log("Sam Score: " + SamScore);
+            SamPlayed = true;
+            SamScoreAll = player2.buildScore(SamScore);
+            //console.log(SamScoreAll);
         }
 
-        if (player1Played && player2Played){
+        if (AnnPlayed && SamPlayed){
             //goAhead ='no';
-            player1Played = false;
-            player2Played = false;
+            AnnPlayed = false;
+            SamPlayed = false;
         }
 
 };
-console.log(player1ScoreAll);
-console.log(player2ScoreAll);
+console.log(AnnScoreAll);
+console.log(SamScoreAll);
 
-finalscore1 = player1.sumScores(player1ScoreAll);
-finalscore2 = player2.sumScores(player2ScoreAll);
-console.log("final score 1: " + finalscore1);
-console.log("final score 2: " + finalscore2);
-if (finalscore1 > finalscore2){
+finalscoreAnn = player1.sumScores(AnnScoreAll);
+finalscoreSam = player2.sumScores(SamScoreAll);
+console.log("final score of Ann: " + finalscoreAnn);
+console.log("final score of Sam: " + finalscoreSam);
+if (finalscoreAnn > finalscoreSam){
     console.log(player1.name + " is winner with highest score: " + player1.finalscore);
 }
-else if(finalscore1 < finalscore2){
+else if(finalscoreAnn < finalscoreSam){
     console.log(player2.name+ " is winner with highest score " + player2.finalscore);
 }
-else if(finalscore1 == finalscore2){
+else if(finalscoreAnn == finalscoreSam){
     console.log("its a tie with equal scores");
 }
