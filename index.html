@@ -16,34 +16,42 @@
 
   <div class="container1">
     <div class="dice">
-      <button id="score1">Score</button>
-      <p class="Player1">Ann</p>
+      <p id="score1"></p>
+      <p class="Player1">Player 1</p>
 
-      <img class="img1" src="dice4.jpg" alt="player1" />
+      <img class="img1" src="images/dice4.jpg" alt="player1" />
     </div>
     <div>
-      <button id="display">Display Rounds</button>
+        <div class="output"></div>
+        <p>choose rounds</p>
+        <input type="number" value=" " />
+        <button id="display">Enter</button>
     </div>
 
     <div class="dice">
-      <button id="score2">Score</button>
-      <p class="Player2">Sam</p>
+        <p id="score2"></p>
+      <p class="Player2">Player 2</p>
 
-      <img class="img2" src="dice5.webp" alt="player2" />
+      <img class="img2" src="images/dice5.webp" alt="player2" />
     </div>
   </div>
-  <script src="js/script.js"></script>
-</body>
+  <script defer src="js/script.js"></script>
 <br />
 <br />
+<div class="finalResult">
+    <p id="result" style="text-align: center;"></p>
+</div>
+<div class="finalText">
+    <p id="finaltext" style="text-align: center;"></p>
+</div>
 <br />
 <footer>
   <div class="container2">
-    <button id="button">Start</button>
-    <button id="button">Continue</button>
-    <button id="button">Winner</button>
-    <button id="button">Quit</button>
+    <button id="start">Start</button>
+    <button id="continue">Continue</button>
+    <button id="winner">Winner</button>
+    <button id="quit">Quit</button>
   </div>
 </footer>
-  
+</body>
 </html> 

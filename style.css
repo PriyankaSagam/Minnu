@@ -29,6 +29,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     padding: 60px;
+    
   }
   #button {
     font-size: x-large;
@@ -47,4 +48,24 @@ header {
     font-size: x-large;
     align-self: center;
   }
+  input {
+    font-size: x-large;
+    width:auto;
+  }
   
+  #start{
+    font-size: xx-large;
+    color: red;
+  }
+  #continue{
+    font-size: xx-large;
+    color: red;
+  }
+  #winner{
+    font-size: xx-large;
+    color: red;
+  }
+  #quit{
+    font-size: xx-large;
+    color: red;
+  }
