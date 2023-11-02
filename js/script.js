@@ -5,11 +5,13 @@ class player{
     this.finalscore = 0;
     };
 
+//to know the score
 
     buildScore(score){
         this.score.push(score);
         return this.score;
     }
+// to know the final score
 
     sumScores(score){
         this.score = score;
@@ -25,11 +27,11 @@ class Dice{
     constructor(){
       this.score = 0
     }
+//rolling dice randomly
 
     rollDice(){
         
         this.score = Math.floor(Math.random() * 6) + 1
-        //console.log(score);
         return this.score;
     };
     }
@@ -51,6 +53,8 @@ var player1FinalScore = 0;
 var player2FinalScore = 0;
 let winnerName = '';
 
+//addEventListener to  enter button and choose rounds
+
 let numOfRounds = 0;
 const enter = document.getElementById('display');
 
@@ -59,6 +63,8 @@ enter.addEventListener('click', function(){
     numOfRounds = document.querySelector('input').value;
     console.log(numOfRounds);
 })
+
+//check the number is numeric and valid number
 
 if (isFinite(numOfRounds) && !isNaN(numOfRounds)){
     console.log(numOfRounds + " is valid number")
@@ -70,6 +76,8 @@ else{
     console.log("Please input a valid number")
 
 }
+
+//addEventListener to start button
 
 const start = document.getElementById('start');
 
@@ -96,14 +104,16 @@ start.addEventListener('click', function(){
             }
     
             if (player1Played && player2Played){
-                //goAhead ='no';
                 player1Played = false;
                 player2Played = false;
             }
     
     };
-    document.getElementById('result').textContent = "Click on winner button to know the winner";
 })
+
+//addEventListener to the winner
+
+document.getElementById('result').textContent = "Click on winner button to know the winner";
 
 const winner = document.getElementById('winner');
 
@@ -137,6 +147,8 @@ winner.addEventListener('click', function(){
 
 });
 
+//addEventListener to continue buttton
+
 const contue = document.getElementById('continue');
 
 contue.addEventListener('click', function(){
@@ -146,6 +158,9 @@ contue.addEventListener('click', function(){
     document.querySelector('input').value = ""
    
 })
+
+//addEventListener to quit button
+
 const qut = document.getElementById('quit');
 
 qut.addEventListener('click', function(){
