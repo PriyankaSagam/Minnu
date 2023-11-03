@@ -18,7 +18,7 @@ header {
     background-color: black;
   }
   p {
-    color: white;
+    color:aquamarine;
     font-size: xx-large;
   }
   img {
@@ -36,15 +36,15 @@ header {
     color: chocolate;
   }
   #score1 {
-    color: blue;
+    color: aqua;
     font-size: x-large;
   }
   #score2 {
-    color: blue;
+    color: aqua;
     font-size: x-large;
   }
   #display {
-    color: blue;
+    color: rgb(255, 0, 119);
     font-size: x-large;
     align-self: center;
   }
@@ -68,4 +68,10 @@ header {
   #quit{
     font-size: xx-large;
     color: red;
+  }
+  #finaltext{
+    color:aqua
+  }
+  #result{
+    color:aqua
   }

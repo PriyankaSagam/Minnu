@@ -5,13 +5,13 @@ class player{
     this.finalscore = 0;
     };
 
-//to know the score
+//to store each round score in an array 
 
     buildScore(score){
         this.score.push(score);
         return this.score;
     }
-// to know the final score
+// to calculating the final score
 
     sumScores(score){
         this.score = score;
@@ -27,7 +27,7 @@ class Dice{
     constructor(){
       this.score = 0
     }
-//rolling dice randomly
+//rolling dice using random function
 
     rollDice(){
         
@@ -109,11 +109,10 @@ start.addEventListener('click', function(){
             }
     
     };
+    document.getElementById('result').textContent = "Click on winner button to know the winner";
 })
 
 //addEventListener to the winner
-
-document.getElementById('result').textContent = "Click on winner button to know the winner";
 
 const winner = document.getElementById('winner');
 
@@ -121,13 +120,20 @@ winner.addEventListener('click', function(){
     player1FinalScore = 0;
     player2FinalScore = 0;
     player1FinalScore = player1.sumScores(player1ScoreAll);
+
+    //player1 finalscore to diplay on game
+
     document.getElementById('score1').textContent = player1FinalScore;
     
     player2FinalScore = player2.sumScores(player2ScoreAll);
+
+    //player2 finalscore to diplay on game
+
     document.getElementById('score2').textContent = player2FinalScore;
 
     console.log("final score of Player1: " + player1FinalScore);
     console.log("final score of Player2: " + player2FinalScore);
+
     if (player1FinalScore > player2FinalScore){
         console.log(player1.name + " is winner with highest score: " + player1.finalscore);
         winnerName = 'Player1 is the Winner';
