@@ -32,8 +32,9 @@
      Thanks to these sites,helped to complete my game.
 
 # Wireframe
-images\wireframe.png
+
+images/flowchart.png
 
 
 # Flow Chart
-images\flowchart.png
+images/flowchart.png
