@@ -1,8 +1,8 @@
- 1. Project's Title
+# 1. Project's Title
 
    "Roll The Dice"
 
- 2. Project Description:
+# 2. Project Description:
 
      Dice game project: It is a 2 player game. 
      Added a input box to choose rounds to play. 
@@ -14,18 +14,18 @@
      Quit button will diable all buttons and it is required to refresh the page to play again.
      Each button will display instructions for player.
 
- 3. Technologies used:
+#  3. Technologies used:
 
      html
      css
      javaScript
      DOM
 
-  4. Images
+#  4. Images
 
       https://pixabay.com/
 
-  5. Include Credits  
+#  5. Include Credits  
 
      For css styling i did check https://css-tricks.com/
      For DOM concept https://www.geeksforgeeks.org/ ,https://stackoverflow.com/..
