@@ -28,12 +28,12 @@
 #  5. Include Credits  
 
      For css styling i did check https://css-tricks.com/
-     For DOM concept https://www.geeksforgeeks.org/ ,https://stackoverflow.com/..
+     For DOM concept  https://www.w3schools.com/ , https://www.geeksforgeeks.org/ ,https://stackoverflow.com/..
      Thanks to these sites,helped to complete my game.
 
 # Wireframe
 
-images/flowchart.png
+![Alt Text](./images/wireframe.png)
 
 
 # Flow Chart
