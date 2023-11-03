@@ -11,7 +11,7 @@ class player{
         this.score.push(score);
         return this.score;
     }
-// to calculating the final score
+// calculating the final score
 
     sumScores(score){
         this.score = score;
@@ -23,6 +23,8 @@ class player{
     }
 
 }
+//Dice class definition
+
 class Dice{
     constructor(){
       this.score = 0
@@ -35,15 +37,21 @@ class Dice{
         return this.score;
     };
     }
-//-----------------------------------------
+//---Main logic starts here--------------------------------------
+ 
+//creating players using player class =>instantiating
+
 let player1=new player('Player1')
 console.log(player1);
 
 let player2=new player('Player2')
 console.log(player2);
 
+//creating dice instance
+
 let dice = new Dice();
 
+//initialising  variables
 
 let player1Played = false;
 let player2Played = false;
@@ -52,8 +60,12 @@ let player2ScoreAll = [];
 var player1FinalScore = 0;
 var player2FinalScore = 0;
 let winnerName = '';
+document.getElementById('continue').disabled = true;
+document.getElementById('winner').disabled = true;
+document.getElementById('start').disabled = true;
+document.getElementById('quit').disabled = true;
 
-//addEventListener to  enter button and choose rounds
+//addEventListener to enter button and choose rounds
 
 let numOfRounds = 0;
 const enter = document.getElementById('display');
@@ -62,6 +74,10 @@ enter.addEventListener('click', function(){
     document.getElementById('result').textContent = "Click on Start Button to start Game";
     numOfRounds = document.querySelector('input').value;
     console.log(numOfRounds);
+    document.getElementById('start').disabled = false;
+    document.getElementById('quit').disabled = false;
+    document.getElementById('continue').disabled = true;
+    document.getElementById('winner').disabled = true;
 })
 
 //check the number is numeric and valid number
@@ -82,7 +98,14 @@ else{
 const start = document.getElementById('start');
 
 start.addEventListener('click', function(){
+    if (numOfRounds == 0){
+        document.getElementById('result').textContent = "";
+        document.getElementById('finaltext').textContent = "Choose Number of rounds to play and hit Enter";
+        document.getElementById('continue').disabled = true;
+        document.getElementById('winner').disabled = true;
+    }
     
+    document.getElementById('winner').disabled = false;
     for (i=1;i<= numOfRounds;i++){
             console.log("round no. :" + i);
             document.getElementById('start').disabled = true;
@@ -117,6 +140,8 @@ start.addEventListener('click', function(){
 const winner = document.getElementById('winner');
 
 winner.addEventListener('click', function(){
+    document.getElementById('continue').disabled = false;
+    document.getElementById('winner').disabled = true;
     player1FinalScore = 0;
     player2FinalScore = 0;
     player1FinalScore = player1.sumScores(player1ScoreAll);
